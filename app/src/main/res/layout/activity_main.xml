@@ -1,160 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-
-    <LinearLayout
+    android:orientation="vertical">
+    <EditText
+        android:enabled="false"
+        android:id="@+id/edt_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <TextView
-            android:id="@+id/tv_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="ID"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/et_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint=""
-            android:inputType="text"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
-    <LinearLayout
+        android:hint="ID" />
+    <EditText
+        android:id="@+id/edt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:hint="Name" />
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Name"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/et_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint=""
-            android:inputType="text"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/edt_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:hint="Number" />
 
-        <TextView
-            android:id="@+id/tv_toan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Điểm toán"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/et_toan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="0"
-            android:inputType="number"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/edt_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:hint="Address" />
 
-        <TextView
-            android:id="@+id/tv_ly"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Điểm lý"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/et_ly"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="0"
-            android:inputType="number"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <TextView
-            android:id="@+id/tv_hoa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Điểm hóa"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/et_hoa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="0"
-            android:inputType="number"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
+        android:hint="Email" />
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btn_them"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thêm"
-            android:layout_weight="1"/>
+            android:layout_gravity="center"
+            android:text="Save" />
         <Button
-            android:id="@+id/btn_sua"
-            android:layout_width="match_parent"
+            android:enabled="false"
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sửa"
-            android:layout_weight="1"/>
-        <Button
-            android:id="@+id/btn_xoa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Xóa"
-            android:layout_weight="1"/>
+            android:layout_gravity="center"
+            android:text="Update" />
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/lv_student"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
